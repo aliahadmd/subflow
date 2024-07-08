@@ -1,0 +1,10 @@
+<!-- templates/newsletter/home.html -->
+{% extends 'newsletter/base.html' %}
+
+{% block title %}Home - Newsletter System{% endblock %}
+
+{% block content %}
+    <h1>Welcome to our Newsletter System</h1>
+    <p>Stay updated with our latest news and updates!</p>
+    <a href="{% url 'subscribe' %}" class="btn btn-primary">Subscribe Now</a>
+{% endblock %}

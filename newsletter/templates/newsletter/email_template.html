@@ -1,0 +1,20 @@
+<!-- templates/newsletter/email_template.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ newsletter.title }}</title>
+</head>
+<body>
+    <h1>{{ newsletter.title }}</h1>
+    <div>
+        {{ newsletter.content|safe }}
+    </div>
+    <hr>
+    <p>
+        If you no longer wish to receive these emails, you can 
+        <a href="{{ unsubscribe_url }}">unsubscribe here</a>.
+    </p>
+</body>
+</html>

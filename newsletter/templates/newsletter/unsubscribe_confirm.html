@@ -1,0 +1,14 @@
+<!-- templates/newsletter/unsubscribe_confirm.html -->
+{% extends 'newsletter/base.html' %}
+
+{% block title %}Unsubscribe Confirmation - Newsletter System{% endblock %}
+
+{% block content %}
+    <h2>Unsubscribe Confirmation</h2>
+    <p>Are you sure you want to unsubscribe {{ subscriber.email }} from our newsletter?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Confirm Unsubscribe</button>
+        <a href="{% url 'home' %}" class="btn btn-secondary">Cancel</a>
+    </form>
+{% endblock %}
