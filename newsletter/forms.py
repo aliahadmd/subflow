@@ -1,6 +1,7 @@
-# forms.py
+# newsletter/forms.py
 
 from django import forms
+from django_summernote.widgets import SummernoteWidget
 from .models import Subscriber, Newsletter
 
 class SubscriberForm(forms.ModelForm):
@@ -13,5 +14,5 @@ class NewsletterForm(forms.ModelForm):
         model = Newsletter
         fields = ['title', 'content']
         widgets = {
-            'content': forms.Textarea(attrs={'rows': 10}),
+            'content': SummernoteWidget(),  # Use SummernoteWidget for 'content' field
         }
