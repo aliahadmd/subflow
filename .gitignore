@@ -88,3 +88,5 @@ media/
 staticfiles/
 .venv
 /.venv
+log
+./log
