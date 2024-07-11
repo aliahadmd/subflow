@@ -20,7 +20,11 @@ env.read_env(str(BASE_DIR / '.env'))
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 SECRET_KEY = env('SECRET_KEY')
+
+
 DEBUG = env.bool('DEBUG')
+
+
 
 
 ALLOWED_HOSTS = ['*']

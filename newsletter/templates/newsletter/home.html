@@ -4,7 +4,43 @@
 {% block title %}Home - Newsletter System{% endblock %}
 
 {% block content %}
-    <h1>Welcome to our Newsletter System</h1>
-    <p>Stay updated with our latest news and updates!</p>
-    <a href="{% url 'subscribe' %}" class="btn btn-primary">Subscribe Now</a>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h1 class="display-4">Welcome to our Newsletter System</h1>
+                <p class="lead">Stay updated with our latest news, product updates, and exclusive offers. Join our community of subscribers and never miss out on important information.</p>
+                <a href="{% url 'subscribe' %}" class="btn btn-lg btn-primary">Subscribe Now</a>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-10 col-lg-8 mx-auto">
+                <h2 class="mb-4">Why Subscribe?</h2>
+                <ul class="list-unstyled">
+                    <li class="media mb-4">
+                        <i class="bi bi-check-circle me-3 text-primary"></i>
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-1">Exclusive Offers</h5>
+                            Get access to exclusive offers and promotions available only to our subscribers.
+                        </div>
+                    </li>
+                    <li class="media mb-4">
+                        <i class="bi bi-check-circle me-3 text-primary"></i>
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-1">Latest News</h5>
+                            Stay informed with the latest news and updates from our company.
+                        </div>
+                    </li>
+                    <li class="media mb-4">
+                        <i class="bi bi-check-circle me-3 text-primary"></i>
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-1">Educational Content</h5>
+                            Learn from our experts with educational content and tips.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
 {% endblock %}
