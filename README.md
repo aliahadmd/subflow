@@ -19,7 +19,7 @@ A robust and user-friendly newsletter management system built with Django. This 
 - django-summernote for rich text editing
 - django-widget-tweaks for form rendering
 - SQLite for development and testing
-- POSTGRESQL/MySQl for production
+- PostgreSQL/MySQL for production
 
 ## Setup and Installation
 
