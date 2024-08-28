@@ -92,11 +92,11 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'subflow',  # Your database name
-        'USER': 'postgres',  # Your database user
-        'PASSWORD': 'postgres',  # Your database user's password
-        'HOST': 'localhost',  # Or your database host
-        'PORT': '5432',  # Default PostgreSQL port
+        'NAME': env('NAME'),  # Your database name
+        'USER': env('USER'),  # Your database user
+        'PASSWORD': env('PASSWORD'),  # Your database user's password
+        'HOST': env('HOST'),  # Or your database host
+        'PORT': env('PORT'),  # Default PostgreSQL port
     }
 }
 
@@ -159,6 +159,8 @@ EMAIL_USE_TLS = env.bool('EMAIL_USE_TLS')
 EMAIL_HOST_USER = env('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 DEFAULT_FROM_EMAIL = env('DEFAULT_FROM_EMAIL')
+
+
 
 
 
