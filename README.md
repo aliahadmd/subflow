@@ -1,3 +1,11 @@
+# Login
+
+- username: admin
+- password: admin
+
+please don't delete any data from the admin.
+
+
 # Django Newsletter Management System
 
 A robust and user-friendly newsletter management system built with Django. This application allows you to create, manage, and send newsletters to subscribers, with features like rich text editing, subscriber management, and email tracking.
