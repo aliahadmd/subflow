@@ -2,9 +2,9 @@
 module.exports = {
     apps: [{
       name: "subflow",
-      script: "/home/p/production/subflow/venv/bin/gunicorn",
+      script: "/home/pi/production/subflow/venv/bin/gunicorn",
       args: "--config gunicorn_config.py core.wsgi:application",
-      cwd: "/home/p/production/subflow",
-      interpreter: "/home/p/production/subflow/venv/bin/python",
+      cwd: "/home/pi/production/subflow",
+      interpreter: "/home/pi/production/subflow/venv/bin/python",
     }]
   }
