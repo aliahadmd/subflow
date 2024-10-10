@@ -90,3 +90,5 @@ staticfiles/
 /.venv
 log
 ./log
+
+venv
