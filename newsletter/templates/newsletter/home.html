@@ -4,12 +4,12 @@
 {% block title %}Home - Newsletter System{% endblock %}
 
 {% block content %}
-    <div class="container">
+    <div class="container" up-target="main">
         <div class="row justify-content-center">
             <div class="col-md-8 text-center">
                 <h1 class="display-4">Welcome to our Newsletter System</h1>
                 <p class="lead">Stay updated with our latest news, product updates, and exclusive offers. Join our community of subscribers and never miss out on important information.</p>
-                <a href="{% url 'subscribe' %}" class="btn btn-lg btn-primary">Subscribe Now</a>
+                <a href="{% url 'subscribe' %}" class="btn btn-lg btn-primary" up-follow>Subscribe Now</a>
             </div>
         </div>
         <div class="row mt-5">
@@ -41,6 +41,4 @@
             </div>
         </div>
     </div>
-
-    
 {% endblock %}

@@ -4,25 +4,27 @@
 {% block title %}Newsletters - Newsletter System{% endblock %}
 
 {% block content %}
-    <h2 class="mb-4">Your Newsletters</h2>
-    <a href="{% url 'newsletter_create' %}" class="btn btn-primary mb-3">Create New Newsletter</a>
-    <div class="list-group">
-        {% for newsletter in newsletters %}
-            <div class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                <div>
-                    <h5 class="mb-1">{{ newsletter.title }}</h5>
-                    <small>Created: {{ newsletter.created_at|date:"F d, Y" }}</small>
+    <div class="container" up-target="main">
+        <h2 class="mb-4">Your Newsletters</h2>
+        <a href="{% url 'newsletter_create' %}" class="btn btn-primary mb-3" up-follow>Create New Newsletter</a>
+        <div class="list-group">
+            {% for newsletter in newsletters %}
+                <div class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="mb-1">{{ newsletter.title }}</h5>
+                        <small>Created: {{ newsletter.created_at|date:"F d, Y" }}</small>
+                    </div>
+                    <div>
+                        <a href="{% url 'newsletter_edit' newsletter.pk %}" class="btn btn-sm btn-secondary" up-follow>Edit</a>
+                        <a href="{% url 'newsletter_delete' newsletter.pk %}" class="btn btn-sm btn-danger" up-follow>Delete</a>
+                        {% if newsletter.is_draft %}
+                            <a href="{% url 'send_newsletter' newsletter.pk %}" class="btn btn-sm btn-success" up-follow>Send</a>
+                        {% endif %}
+                    </div>
                 </div>
-                <div>
-                    <a href="{% url 'newsletter_edit' newsletter.pk %}" class="btn btn-sm btn-secondary">Edit</a>
-                    <a href="{% url 'newsletter_delete' newsletter.pk %}" class="btn btn-sm btn-danger">Delete</a>
-                    {% if newsletter.is_draft %}
-                        <a href="{% url 'send_newsletter' newsletter.pk %}" class="btn btn-sm btn-success">Send</a>
-                    {% endif %}
-                </div>
-            </div>
-        {% empty %}
-            <div class="alert alert-info">No newsletters available.</div>
-        {% endfor %}
+            {% empty %}
+                <div class="alert alert-info">No newsletters available.</div>
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}

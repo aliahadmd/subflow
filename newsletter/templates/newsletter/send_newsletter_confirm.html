@@ -4,11 +4,13 @@
 {% block title %}Send Newsletter - Newsletter System{% endblock %}
 
 {% block content %}
-    <h2>Send Newsletter</h2>
-    <p>Are you sure you want to send the newsletter "{{ newsletter.title }}" to all active subscribers?</p>
-    <form method="post">
-        {% csrf_token %}
-        <button type="submit" class="btn btn-success">Confirm Send</button>
-        <a href="{% url 'newsletter_list' %}" class="btn btn-secondary">Cancel</a>
-    </form>
+    <div class="container" up-target="main">
+        <h2>Send Newsletter</h2>
+        <p>Are you sure you want to send the newsletter "{{ newsletter.title }}" to all active subscribers?</p>
+        <form method="post" up-target="main" up-transition="cross-fade">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-success">Confirm Send</button>
+            <a href="{% url 'newsletter_list' %}" class="btn btn-secondary" up-follow>Cancel</a>
+        </form>
+    </div>
 {% endblock %}
