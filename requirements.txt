@@ -2,6 +2,7 @@ asgiref==3.8.1
 bleach==6.1.0
 boto3==1.35.38
 botocore==1.35.38
+Brotli==1.1.0
 click==8.1.7
 colorama==0.4.6
 cssbeautifier==1.15.1
