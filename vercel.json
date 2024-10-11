@@ -1,27 +1,27 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "core/wsgi.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.12" }
-      },
-      {
-        "src": "build_files.sh",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "staticfiles_build"
-        }
-      }
-    ],
-    "routes": [
-      {
-        "src": "/static/(.*)",
-        "dest": "/static/$1"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "core/wsgi.py"
-      }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "core/wsgi.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.12" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "https://subflow.r2.cloudflarestorage.com/static/$1"
+    },
+    {
+      "src": "/media/(.*)",
+      "dest": "https://subflow.r2.cloudflarestorage.com/media/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "core/wsgi.py"
+    }
+  ],
+  "env": {
+    "PYTHON_VERSION": "3.12"
   }
+}
