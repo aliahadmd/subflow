@@ -10,11 +10,11 @@
   "routes": [
     {
       "src": "/static/(.*)",
-      "dest": "https://subflow.r2.cloudflarestorage.com/static/$1"
+      "dest": "https://subflow-bucket.aliahad.com/static/$1"
     },
     {
       "src": "/media/(.*)",
-      "dest": "https://subflow.r2.cloudflarestorage.com/media/$1"
+      "dest": "https://subflow-bucket.aliahad.com/media/$1"
     },
     {
       "src": "/(.*)",
