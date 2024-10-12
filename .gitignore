@@ -92,5 +92,7 @@ log
 ./log
 
 venv
-static
-media
+
+
+.env
+venv
